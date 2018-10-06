@@ -1,0 +1,6 @@
+name: RedVSBlue
+description: Players are split into 2 teams; half of the players on the red team and the other half on the blue team.
+author: Caleb Bassham
+version: 1.0
+depend: [ScenarioManager]
+main: me.calebbassham.redvsblue.RedVSBluePlugin

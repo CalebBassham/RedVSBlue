@@ -11,11 +11,8 @@ public class RedVSBlue extends SimpleScenario implements TeamAssigner {
 
     @Override
     public void onAssignTeams(TeamProvider teams, Player[] players, Runnable onComplete) {
-        Team red = teams.mustRegisterTeam("red");
-        red.setColor(ChatColor.RED);
-
-        Team blue = teams.mustRegisterTeam("blue");
-        blue.setColor(ChatColor.BLUE);
+        Team red = teams.mustRegisterTeam("red", ChatColor.RED);
+        Team blue = teams.mustRegisterTeam("blue", ChatColor.BLUE);
 
         for (int i = 0; i < players.length; i++) {
             Player player = players[i];

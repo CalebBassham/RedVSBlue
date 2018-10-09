@@ -6,11 +6,15 @@ import me.calebbassham.scenariomanager.api.uhc.TeamProvider;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Team;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.CompletableFuture;
 
 public class RedVSBlue extends SimpleScenario implements TeamAssigner {
 
+    @NotNull
     @Override
-    public void onAssignTeams(TeamProvider teams, Player[] players, Runnable onComplete) {
+    public CompletableFuture<Void> onAssignTeams(@NotNull TeamProvider teams, @NotNull Player[] players) {
         Team red = teams.mustRegisterTeam("red", ChatColor.RED);
         Team blue = teams.mustRegisterTeam("blue", ChatColor.BLUE);
 
@@ -25,7 +29,8 @@ public class RedVSBlue extends SimpleScenario implements TeamAssigner {
         }
 
         broadcast("Assigned players to teams.");
-        onComplete.run();
+
+        return CompletableFuture.completedFuture(null);
     }
 
 }

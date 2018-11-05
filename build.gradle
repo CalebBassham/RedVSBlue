@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.13-R0.1-SNAPSHOT"
-    compileOnly "me.calebbassham:ScenarioManager:0.7.1"
+    compileOnly "me.calebbassham:ScenarioManager:0.8.4"
 }
 
 jar {

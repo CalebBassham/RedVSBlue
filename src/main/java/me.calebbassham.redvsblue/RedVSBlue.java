@@ -6,15 +6,13 @@ import me.calebbassham.scenariomanager.api.uhc.TeamProvider;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Team;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
 public class RedVSBlue extends SimpleScenario implements TeamAssigner {
 
-    @NotNull
     @Override
-    public CompletableFuture<Void> onAssignTeams(@NotNull TeamProvider teams, @NotNull Player[] players) {
+    public CompletableFuture<Void> onAssignTeams(TeamProvider teams, Player[] players) {
         Team red = teams.mustRegisterTeam("red", ChatColor.RED);
         Team blue = teams.mustRegisterTeam("blue", ChatColor.BLUE);
 
